@@ -1,0 +1,17 @@
+# Coloque este arquivo em .github/workflows/ do SEU FORK do rustdesk (apos rodar brand.sh)
+# Reutiliza o pipeline oficial de build (Flutter) - gera Windows, Linux, macOS, Android.
+# Disparo manual em Actions > "MF Desk build". Artefatos ficam na aba do run / release "mfdesk".
+name: MF Desk build
+on:
+  workflow_dispatch:
+  push:
+    tags: ["mfdesk-*"]
+env:
+  TZ: America/Sao_Paulo
+jobs:
+  build:
+    uses: ./.github/workflows/mfdesk-windows.yml
+    with:
+      upload-artifact: true
+      upload-tag: "mfdesk"
+    secrets: inherit

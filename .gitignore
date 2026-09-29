@@ -56,3 +56,15 @@ vcpkg_installed
 flutter/lib/generated_plugin_registrant.dart
 libsciter.dylib
 flutter/web/
+# MF Desk branding
+!res/*.png
+!res/*.svg
+!res/*.ico
+!flutter/assets/*.png
+!flutter/assets/*.svg
+!flutter/windows/runner/resources/*.ico
+!flutter/android/app/src/main/res/mipmap-mdpi/*.png
+!flutter/android/app/src/main/res/mipmap-hdpi/*.png
+!flutter/android/app/src/main/res/mipmap-xhdpi/*.png
+!flutter/android/app/src/main/res/mipmap-xxhdpi/*.png
+!flutter/android/app/src/main/res/mipmap-xxxhdpi/*.png
